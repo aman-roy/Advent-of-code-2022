@@ -22,7 +22,7 @@ os.chdir(oldpwd)
 
 
 # get size of any folder
-def get_size(start_path = '.'):
+def get_size(start_path='.'):
     total_size = 0
     for dirpath, _, filenames in os.walk(start_path):
         for f in filenames:
@@ -30,15 +30,5 @@ def get_size(start_path = '.'):
     return total_size
 
 
-print(sum([get_size(x) for x in glob.iglob("aman" + '**/**', recursive=True) if os.path.isdir(x) and get_size(x)<=100000]))
-
-
-
-
-
-
-
-
-
-
-
+print(sum([get_size(x) for x in glob.iglob("aman" + '**/**', recursive=True) if
+           os.path.isdir(x) and get_size(x) <= 100000]))
